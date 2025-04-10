@@ -1,10 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography, Button, TextField } from "@mui/material";
 import { exerciseOptions, fetchData } from "../utils/fetchData"; 
+import HorizontalScrollbar from "../components/horizontalScrollbar";  
 
-const SearchExercises = () => {
+const SearchExercises = ({setExercises , bodyPart , setBodyPart}) => {
   const [search, setSearch] = useState("");
-  const [exercises , setExercises] = useState([]);
+  const [bodyParts , setBodyParts] = useState([]) ;
+
+   //now this useffect is used to get the categories of exercise  
+   //as soon as site loads and for one time only ; 
+
+  //this useEffect is used to get the bodypart list from the api
+
+  useEffect(()=>{
+    const fetchExerciseData = async () =>{
+       const bodypartData = await fetchData("https://exercise-db.p.rapidapi.com/exercises/bodyPartList", exerciseOptions) ; 
+          
+        setBodyParts(['all' , ...bodypartData]) ;
+    } 
+
+    fetchExerciseData();
+  } , [])
 
   const handleSearch = async () => {
       if(search){
@@ -74,6 +90,12 @@ const SearchExercises = () => {
         >
           Search
         </Button>
+      </Box>
+
+      <Box sx={{ position: "relative", width: "100%", marginTop: "20px" }}>
+
+        <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
+
       </Box>
     </Stack>
   );
