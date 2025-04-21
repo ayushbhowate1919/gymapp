@@ -73,6 +73,11 @@ const SearchExercises = ({setExercises , bodyPart , setBodyPart}) => {
           value={search}
           placeholder="Search Exercises..."
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
+          onKeyDown={(e)=>{
+            if(e.key === 'Enter'){
+              handleSearch();
+            }
+          }}
           type="text"
         />
         <Button
