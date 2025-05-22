@@ -10,6 +10,9 @@ import Exercises from '../components/exercises' ;
 const Home = () => {
   const [exercises , setExercises] = useState([]);
   const [bodyPart , setBodyPart] = useState('all') ;
+
+  console.log(bodyPart);
+  
   return (
     <div>
       <Box>

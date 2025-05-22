@@ -24,7 +24,7 @@ const SearchExercises = ({setExercises , bodyPart , setBodyPart}) => {
 
   const handleSearch = async () => {
       if(search){
-        const exercisesData = await fetchData("https://exercisedb.p.rapidapi.com/exercises?limit=100", exerciseOptions) ; 
+        const exercisesData = await fetchData("https://exercisedb.p.rapidapi.com/exercises?limit=500", exerciseOptions) ; 
          
         //  console.log(exercisesData) ;
 
