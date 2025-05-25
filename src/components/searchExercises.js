@@ -46,7 +46,9 @@ const SearchExercises = ({setExercises , bodyPart , setBodyPart}) => {
     <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
       <Typography
         fontWeight={700}
-        sx={{ fontSize: { lg: "44px", xs: "30px" } }}
+        sx={{ fontSize: { lg: "44px", xs: "30px" }, 
+             fontFamily: '"Fira Mono", "Roboto Mono", monospace',
+       }}
         mb="50px"
         textAlign="center"
       >
