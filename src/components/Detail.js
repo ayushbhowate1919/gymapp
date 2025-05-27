@@ -55,6 +55,7 @@ const Detail = ({ exerciseDetail }) => {
                 <Button sx={{ background: '#f0f4f8', borderRadius: '50%', width: '60px', height: '60px' }}> 
                   <img src={item.icon} alt={item.name} />
                 </Button>
+                
                 <Typography
                   variant="h5"
                   sx={{

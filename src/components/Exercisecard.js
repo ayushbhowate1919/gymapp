@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom' ;
 import { Stack , Typography , Button } from '@mui/material' ; 
 
 const Exercisecard = ({exercise}) => {
+  
   console.log(exercise)
   return (
        <Link className="exercise-card" to = {`/exercise/${exercise.id}`}>
