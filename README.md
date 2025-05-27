@@ -5,8 +5,7 @@ A modern and responsive gym application built using **React** and **Material UI*
 ---
 
 ## 🔥 Live Demo
-
-> Coming soon... *(Add your Netlify/Vercel link here)*
+https://gymapp-snowy.vercel.app/
 
 ---
 
