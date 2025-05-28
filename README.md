@@ -3,12 +3,6 @@
 A modern and responsive gym application built using **React** and **Material UI**, powered by the **ExerciseDB API** and **YouTube Search API**. Search exercises by name or body part, explore detailed workout instructions, and discover related video tutorials — all in one place.
 
 ---
-
-## 🔥 Live Demo
-https://gymapp-snowy.vercel.app/
-
----
-
 ## 🚀 Features
 
 - 🔎 **Search Exercises** by name, equipment, or body part
